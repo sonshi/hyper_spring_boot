@@ -21,7 +21,7 @@ public class MessageController {
 	public String messages(Model model) {
 		model.addAttribute("messageForm", new MessageForm());
 		
-		List<Message>messages = service.getRecentMessages(100);
+		List<Message> messages = service.getRecentMessages(100);
 		model.addAttribute("messages", messages);
 		
 		return "messages";
@@ -30,7 +30,7 @@ public class MessageController {
 	@PostMapping("/messages")
 	public String messagePost(Model model, @Valid MessageForm messageForm, BindingResult bindingResult, HttpServletRequest request) {
 		if (bindingResult.hasErrors()) {
-			List<Message>messages = service.getRecentMessages(100);
+			List<Message> messages = service.getRecentMessages(100);
 			model.addAttribute("messages", messages);
 			return "messages";
 		}

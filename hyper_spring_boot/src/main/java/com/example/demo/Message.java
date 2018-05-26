@@ -74,7 +74,7 @@ public class Message {
 		return remoteAddr;
 	}
 	
-	public void setRemoteAddr() {
+	public void setRemoteAddr(String remoteAddr) {
 		this.remoteAddr = remoteAddr;
 	}
 	
